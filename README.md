@@ -8,6 +8,8 @@ A React component that displays the password strength bar
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![License](https://img.shields.io/npm/l/react-password-strength-bar.svg)](https://www.npmjs.com/package/react-password-strength-bar)
 
+![Gif](./examples/static/example.gif)
+
 ## Install
 ```
 $ npm install react-password-strength-bar
