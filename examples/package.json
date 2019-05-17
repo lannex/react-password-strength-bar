@@ -1,0 +1,70 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./static/index.html"
+  },
+  "keywords": [
+    "examples"
+  ],
+  "author": "lannex.shin@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "parcel-bundler": "1.12.3"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "airbnb",
+      "prettier",
+      "prettier/react"
+    ],
+    "plugins": [
+      "react"
+    ],
+    "globals": {
+      "__DEV__": true,
+      "$": true
+    },
+    "env": {
+      "browser": true
+    },
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    },
+    "rules": {
+      "arrow-body-style": 1,
+      "max-len": [
+        2,
+        {
+          "code": 80
+        }
+      ],
+      "no-param-reassign": 0,
+      "no-restricted-syntax": 0,
+      "padded-blocks": 1,
+      "semi": 2,
+      "jsx-a11y/click-events-have-key-events": 0,
+      "jsx-a11y/label-has-associated-control": 0,
+      "jsx-a11y/label-has-for": 0,
+      "react/jsx-filename-extension": 0,
+      "react/jsx-no-bind": 0,
+      "react/jsx-pascal-case": 2,
+      "react/sort-comp": 1
+    }
+  }
+}
