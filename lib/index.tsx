@@ -37,6 +37,10 @@ const Item: React.FunctionComponent<PasswordStrengthBarItemProps> = ({
 };
 
 export interface PasswordStrengthBarProps {
+  className?: string;
+  style?: {};
+  scoreWordClassName?: string;
+  scoreWordStyle?: {};
   password: string;
   userInputs?: string[];
   barColors?: string[];
@@ -70,6 +74,10 @@ const PasswordStrengthBar: React.FunctionComponent<
   PasswordStrengthBarProps
 > = props => {
   const {
+    className,
+    style,
+    scoreWordClassName,
+    scoreWordStyle,
     password,
     userInputs,
     barColors,
@@ -87,7 +95,7 @@ const PasswordStrengthBar: React.FunctionComponent<
   }
 
   return (
-    <div style={rootStyle}>
+    <div className={className} style={{ ...rootStyle, ...style }}>
       <div style={wrapStyle}>
         {[1, 2, 3, 4].map((el: number) => {
           return (
@@ -98,12 +106,21 @@ const PasswordStrengthBar: React.FunctionComponent<
           );
         })}
       </div>
-      <p style={descStyle}>{newShortScoreWord}</p>
+      <p
+        className={scoreWordClassName}
+        style={{ ...descStyle, ...scoreWordStyle }}
+      >
+        {newShortScoreWord}
+      </p>
     </div>
   );
 };
 
 PasswordStrengthBar.defaultProps = {
+  className: undefined,
+  style: undefined,
+  scoreWordClassName: undefined,
+  scoreWordStyle: undefined,
   userInputs: [],
   barColors: ['#ddd', '#ef4836', '#f6b44d', '#2b90ef', '#25c281'],
   scoreWords: ['weak', 'weak', 'okay', 'good', 'strong'],
