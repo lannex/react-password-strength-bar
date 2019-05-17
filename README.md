@@ -10,6 +10,13 @@ A React component that displays the password strength bar
 
 ![Gif](./examples/static/example.gif)
 
+## Note
+- This package is based on [zxcvbn](https://github.com/dropbox/zxcvbn).
+`zxcvbn` is a powerful library, but its size is very large.
+I recommend you use this package by code splitting.
+- The input tag is not included. 
+If you want to include the input tag, use the [mmw/react-password-strength](https://github.com/mmw/react-password-strength) package.
+
 ## Install
 ```
 $ npm install react-password-strength-bar
