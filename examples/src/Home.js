@@ -42,7 +42,13 @@ class Home extends PureComponent {
               });
             }}
           />
-          <PasswordStrengthBar password={inputValue} minLength={5} />
+          <PasswordStrengthBar
+            password={inputValue}
+            minLength={5}
+            onChangeScore={score => {
+              console.log(score);
+            }}
+          />
         </div>
       </div>
     );
