@@ -1,40 +1,6 @@
 import React, { Fragment, CSSProperties } from 'react';
 import zxcvbn from 'zxcvbn';
-
-interface PasswordStrengthBarItemProps {
-  score: number;
-  itemNum: number;
-  barColors: string[];
-}
-
-const itemStyle: CSSProperties = {
-  flexBasis: 0,
-  flexGrow: 1,
-  position: 'relative',
-  maxWidth: '100%',
-  width: '100%',
-  height: 2,
-};
-
-const Item: React.FunctionComponent<PasswordStrengthBarItemProps> = ({
-  score,
-  itemNum,
-  barColors,
-}) => {
-  let bgColor = barColors[0];
-  if (score >= itemNum) {
-    bgColor = barColors[score];
-  }
-
-  return (
-    <div
-      style={{
-        ...itemStyle,
-        backgroundColor: bgColor,
-      }}
-    />
-  );
-};
+import Item from './Item';
 
 export interface PasswordStrengthBarProps {
   className?: string;
