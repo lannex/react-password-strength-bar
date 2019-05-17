@@ -34,6 +34,10 @@ const { password } = this.state;
 ```
 
 ## Props
+#### className?: string;
+#### style?: {};
+#### scoreWordClassName?: string;
+#### scoreWordStyle?: {};
 #### password: string;
 #### userInputs?: string[];
 #### barColors?: string[];
