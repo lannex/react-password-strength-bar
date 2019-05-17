@@ -84,6 +84,11 @@ const { password } = this.state;
 - type: string
 - default: 'too short'
 
+### onChangeScore
+- isRequired: false
+- type: Function | (score) => void
+- default: undefined
+
 ## Browser support
 Tested with modern browsers.
 
