@@ -17,7 +17,8 @@
     "react",
     "password",
     "strength",
-    "bar"
+    "bar",
+    "zxcvbn"
   ],
   "author": "lannex.shin@gmail.com",
   "license": "MIT",
