@@ -74,12 +74,12 @@ const { password } = this.state;
 - type: string[]
 - default: ['weak', 'weak', 'okay', 'good', 'strong']
 
-#### minLength?: number;
+#### minLength
 - isRequired: false
 - type: number
 - default: 4
 
-#### shortScoreWord?: string;
+#### shortScoreWord
 - isRequired: false
 - type: string
 - default: 'too short'
