@@ -5,6 +5,7 @@ A React component that displays the password strength bar
 
 [![Version](https://img.shields.io/npm/v/react-password-strength-bar.svg)](https://www.npmjs.com/package/react-password-strength-bar)
 [![Build](https://travis-ci.org/lannex/react-password-strength-bar.svg?branch=master)](https://www.npmjs.com/package/react-password-strength-bar)
+[![Coverage Status](https://coveralls.io/repos/github/lannex/react-password-strength-bar/badge.svg?branch=master)](https://coveralls.io/github/lannex/react-password-strength-bar?branch=master)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![License](https://img.shields.io/npm/l/react-password-strength-bar.svg)](https://www.npmjs.com/package/react-password-strength-bar)
 
