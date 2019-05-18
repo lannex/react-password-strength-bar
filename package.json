@@ -7,7 +7,7 @@
     "start": "npm run build",
     "build": "NODE_ENV=production rollup -c --environment INCLUDE_DEPS,BUILD:production",
     "dev": "rollup -cw",
-    "test": "jest"
+    "test": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "@types/react": "^16.8.17",
     "@types/react-dom": "^16.8.4",
     "@types/zxcvbn": "^4.4.0",
+    "coveralls": "^3.0.3",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.0",
     "jest": "^24.8.0",
