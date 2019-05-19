@@ -1,7 +1,7 @@
 # react-password-strength-bar
 A React component that displays the password strength bar
 
-[![NPM](https://nodei.co/npm/react-password-strength-bar.png?mini=true)](https://nodei.co/npm/react-password-strength-bar/)
+[![NPM](https://nodei.co/npm/react-password-strength-bar.png?compact=true)](https://nodei.co/npm/react-password-strength-bar/)
 
 [![Version](https://img.shields.io/npm/v/react-password-strength-bar.svg)](https://www.npmjs.com/package/react-password-strength-bar)
 [![Build](https://travis-ci.org/lannex/react-password-strength-bar.svg?branch=master)](https://www.npmjs.com/package/react-password-strength-bar)
