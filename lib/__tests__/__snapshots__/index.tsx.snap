@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`index matches snapshot 1`] = `ShallowWrapper {}`;
+
+exports[`react-password-strength-bar matches snapshot 1`] = `ShallowWrapper {}`;
