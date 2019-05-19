@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/lannex/react-password-strength-bar#readme",
   "devDependencies": {
+    "@types/enzyme": "^3.9.2",
     "@types/jest": "^24.0.13",
     "@types/react": "^16.8.17",
     "@types/react-dom": "^16.8.4",
