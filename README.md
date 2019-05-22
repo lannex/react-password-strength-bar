@@ -35,59 +35,48 @@ const { password } = this.state;
 ```
 
 ## Props
-### className
+#### `className`: string
 - isRequired: false
-- type: string
 - default: undefined
 
-### style
+#### `style`: object
 - isRequired: false
-- type: object
 - default: undefined
 
-### scoreWordClassName
+#### `scoreWordClassName`: string
 - isRequired: false
-- type: string
 - default: undefined
 
-### scoreWordStyle
+#### `scoreWordStyle`: object
 - isRequired: false
-- type: object
 - default: undefined
 
-### password
+#### `password`: string
 - isRequired: true
-- type: string
 - default: ''
 
-### userInputs
+#### `userInputs`: string[]
 - isRequired: false
-- type: string[]
 - default: []
 
-### barColors
+#### `barColors`: string[]
 - isRequired: false
-- type: string[]
 - default: ['#ddd', '#ef4836', '#f6b44d', '#2b90ef', '#25c281']
 
-### scoreWords
+#### `scoreWords`: string[]
 - isRequired: false
-- type: string[]
 - default: ['weak', 'weak', 'okay', 'good', 'strong']
 
-### minLength
+#### `minLength`: number
 - isRequired: false
-- type: number
 - default: 4
 
-### shortScoreWord
+#### `shortScoreWord`: string
 - isRequired: false
-- type: string
 - default: 'too short'
 
-### onChangeScore
+#### `onChangeScore`: (score) => void
 - isRequired: false
-- type: Function | (score) => void
 - default: undefined
 
 ## Browser support
