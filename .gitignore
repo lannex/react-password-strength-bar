@@ -3,3 +3,4 @@ node_modules/
 .vscode/
 examples/node_modules/
 examples/dist/
+.coveralls.yml
