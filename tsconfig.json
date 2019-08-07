@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
+    "module": "ES2015",
     "jsx": "react",
-    "allowJs": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
@@ -12,7 +11,8 @@
     "removeComments": true,
     "sourceMap": true,
     "skipLibCheck": true,
-    "lib": ["es2018", "dom"]
+    "lib": ["es2018", "dom"],
+    "declaration": true
   },
   "include": ["lib/**/*"]
 }
