@@ -15,7 +15,9 @@ module.exports = {
   },
   external: ['react', 'react-dom'],
   plugins: [
-    typescript(),
+    typescript({
+      clean: true,
+    }),
     resolve(),
     commonjs(),
     replace({
