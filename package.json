@@ -27,35 +27,36 @@
   },
   "homepage": "https://github.com/lannex/react-password-strength-bar#readme",
   "devDependencies": {
-    "@types/enzyme": "^3.10.3",
-    "@types/jest": "^24.0.17",
-    "@types/react": "^16.8.24",
-    "@types/react-dom": "^16.8.5",
-    "@types/zxcvbn": "^4.4.0",
-    "coveralls": "^3.0.6",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "jest": "^24.8.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "rollup": "^1.19.4",
-    "rollup-plugin-commonjs": "^10.0.2",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-replace": "^2.2.0",
-    "rollup-plugin-typescript2": "^0.22.1",
-    "rollup-plugin-uglify": "^6.0.2",
-    "ts-jest": "^24.0.2",
-    "tslint": "^5.18.0",
-    "tslint-config-airbnb": "^5.11.1",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-react": "^4.0.0",
-    "typescript": "^3.5.3"
+    "@types/enzyme": "3.10.4",
+    "@types/enzyme-adapter-react-16": "1.0.5",
+    "@types/jest": "25.1.0",
+    "@types/react": "16.9.19",
+    "@types/react-dom": "16.9.5",
+    "@types/zxcvbn": "4.4.0",
+    "coveralls": "3.0.9",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.2",
+    "jest": "25.1.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "rollup": "1.19.4",
+    "rollup-plugin-commonjs": "10.0.2",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-replace": "2.2.0",
+    "rollup-plugin-typescript2": "0.22.1",
+    "rollup-plugin-uglify": "6.0.2",
+    "ts-jest": "25.0.0",
+    "tslint": "6.0.0",
+    "tslint-config-airbnb": "5.11.2",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-react": "4.2.0",
+    "typescript": "3.7.5"
   },
   "peerDependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
   },
   "dependencies": {
-    "zxcvbn": "^4.4.2"
+    "zxcvbn": "4.4.2"
   }
 }
