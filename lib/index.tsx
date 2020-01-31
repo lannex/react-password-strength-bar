@@ -1,5 +1,7 @@
 import React, { Fragment, CSSProperties } from 'react';
 import zxcvbn from 'zxcvbn';
+
+// components
 import Item from './Item';
 
 export interface PasswordStrengthBarProps {
@@ -45,11 +47,12 @@ class PasswordStrengthBar extends React.Component<
   PasswordStrengthBarProps,
   PasswordStrengthBarState
 > {
-  static defaultProps = {
+  public static defaultProps: PasswordStrengthBarProps = {
     className: undefined,
     style: undefined,
     scoreWordClassName: undefined,
     scoreWordStyle: undefined,
+    password: '',
     userInputs: [],
     barColors: ['#ddd', '#ef4836', '#f6b44d', '#2b90ef', '#25c281'],
     scoreWords: ['weak', 'weak', 'okay', 'good', 'strong'],
@@ -58,22 +61,22 @@ class PasswordStrengthBar extends React.Component<
     onChangeScore: undefined,
   };
 
-  state = {
+  public state = {
     score: 0,
   };
 
-  componentDidMount() {
+  public componentDidMount(): void {
     this.setScore();
   }
 
-  componentDidUpdate(prevProps: PasswordStrengthBarProps) {
+  public componentDidUpdate(prevProps: PasswordStrengthBarProps): void {
     const { password } = this.props;
     if (prevProps.password !== password) {
       this.setScore();
     }
   }
 
-  setScore = () => {
+  private setScore = (): void => {
     const { password, minLength, userInputs, onChangeScore } = this.props;
     let result = null;
     let score = 0;
@@ -93,7 +96,7 @@ class PasswordStrengthBar extends React.Component<
     );
   };
 
-  public render() {
+  public render(): React.ReactNode {
     const {
       className,
       style,

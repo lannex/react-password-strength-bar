@@ -42,6 +42,7 @@
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
     ],
     "react/prop-types": 0,
-    "react/state-in-constructor": 0
+    "react/state-in-constructor": 0,
+    "react/static-property-placement": [2, "static public field"]
   }
 }
