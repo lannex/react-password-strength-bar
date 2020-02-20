@@ -16,24 +16,13 @@ interface PasswordStrengthBarState {
     score: number;
 }
 declare class PasswordStrengthBar extends React.Component<PasswordStrengthBarProps, PasswordStrengthBarState> {
-    static defaultProps: {
-        className: any;
-        style: any;
-        scoreWordClassName: any;
-        scoreWordStyle: any;
-        userInputs: any[];
-        barColors: string[];
-        scoreWords: string[];
-        minLength: number;
-        shortScoreWord: string;
-        onChangeScore: any;
-    };
+    static defaultProps: PasswordStrengthBarProps;
     state: {
         score: number;
     };
     componentDidMount(): void;
     componentDidUpdate(prevProps: PasswordStrengthBarProps): void;
-    setScore: () => void;
-    render(): JSX.Element;
+    private setScore;
+    render(): React.ReactNode;
 }
 export default PasswordStrengthBar;
