@@ -1,6 +1,6 @@
 {
   "name": "react-password-strength-bar",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A React component that displays the password strength bar",
   "main": "dist/index.js",
   "scripts": {
