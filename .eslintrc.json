@@ -10,7 +10,7 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
-    "prettier/@typescript-eslint",
+    "prettier",
     "plugin:prettier/recommended"
   ],
   "globals": {
@@ -43,6 +43,8 @@
     ],
     "react/prop-types": 0,
     "react/state-in-constructor": 0,
-    "react/static-property-placement": [2, "static public field"]
+    "react/static-property-placement": [2, "static public field"],
+    "no-use-before-define": 0,
+    "@typescript-eslint/no-use-before-define": ["error"],
   }
 }
