@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 export interface PasswordStrengthBarProps {
     className?: string;
-    style?: {};
+    style?: CSSProperties;
     scoreWordClassName?: string;
-    scoreWordStyle?: {};
+    scoreWordStyle?: CSSProperties;
     password: string;
     userInputs?: string[];
     barColors?: string[];

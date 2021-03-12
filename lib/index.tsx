@@ -6,9 +6,9 @@ import Item from './Item';
 
 export interface PasswordStrengthBarProps {
   className?: string;
-  style?: {};
+  style?: CSSProperties;
   scoreWordClassName?: string;
-  scoreWordStyle?: {};
+  scoreWordStyle?: CSSProperties;
   password: string;
   userInputs?: string[];
   barColors?: string[];
