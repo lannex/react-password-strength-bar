@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
-import PasswordStrengthBar from '../../dist';
+// import PasswordStrengthBar from '../../dist';
+import PasswordStrengthBar from 'react-password-strength-bar';
 
 class Home extends PureComponent {
   constructor(props) {
@@ -36,7 +37,7 @@ class Home extends PureComponent {
             style={styles.input}
             type="password"
             value={inputValue}
-            onChange={e => {
+            onChange={(e) => {
               this.setState({
                 inputValue: e.target.value,
               });
@@ -45,8 +46,8 @@ class Home extends PureComponent {
           <PasswordStrengthBar
             password={inputValue}
             minLength={5}
-            onChangeScore={score => {
-              console.log(score);
+            onChangeScore={(score, feedback) => {
+              console.log(score, feedback);
             }}
           />
         </div>
