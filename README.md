@@ -15,7 +15,7 @@ A React component that displays the password strength bar
 - This package is based on [zxcvbn](https://github.com/dropbox/zxcvbn).
 `zxcvbn` is a powerful library, but its size is very large.
 I recommend you use this package by [Code-Splitting](https://reactjs.org/docs/code-splitting.html).
-- The input tag is not included. 
+- The input tag is not included.
 If you want to include the input tag, use the [mmw/react-password-strength](https://github.com/mmw/react-password-strength) package.
 
 ## Install
@@ -75,7 +75,7 @@ const { password } = this.state;
 - isRequired: false
 - default: 'too short'
 
-#### `onChangeScore`: (score) => void
+#### `onChangeScore`: (score, feedback) => void
 - isRequired: false
 - default: undefined
 
