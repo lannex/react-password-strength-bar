@@ -4,6 +4,11 @@ import zxcvbn from 'zxcvbn';
 // components
 import Item from './Item';
 
+export interface PasswordFeedback {
+  warning?: string;
+  suggestions?: string[]
+}
+
 export interface PasswordStrengthBarProps {
   className?: string;
   style?: CSSProperties;
@@ -15,11 +20,12 @@ export interface PasswordStrengthBarProps {
   scoreWords?: string[];
   minLength?: number;
   shortScoreWord?: string;
-  onChangeScore?: (score: number) => void;
+  onChangeScore?: (score: number, feedback: PasswordFeedback) => void;
 }
 
 interface PasswordStrengthBarState {
   score: number;
+  feedback: PasswordFeedback;
 }
 
 const rootStyle: CSSProperties = {
@@ -63,6 +69,7 @@ class PasswordStrengthBar extends React.Component<
 
   public state = {
     score: 0,
+    feedback: {}
   };
 
   public componentDidMount(): void {
@@ -80,17 +87,19 @@ class PasswordStrengthBar extends React.Component<
     const { password, minLength, userInputs, onChangeScore } = this.props;
     let result = null;
     let score = 0;
+    let feedback: PasswordFeedback = {};
     if (password.length >= minLength) {
       result = zxcvbn(password, userInputs);
-      ({ score } = result);
+      ({ score, feedback } = result);
     }
     this.setState(
       {
         score,
+        feedback
       },
       () => {
         if (onChangeScore) {
-          onChangeScore(score);
+          onChangeScore(score, feedback);
         }
       },
     );
