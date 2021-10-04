@@ -1,4 +1,4 @@
-import React, { Fragment, CSSProperties } from 'react';
+import React, { Fragment, CSSProperties, ReactNode } from 'react';
 import zxcvbn from 'zxcvbn';
 
 // components
@@ -17,9 +17,9 @@ export interface PasswordStrengthBarProps {
   password: string;
   userInputs?: string[];
   barColors?: string[];
-  scoreWords?: string[];
+  scoreWords?: ReactNode[];
   minLength?: number;
-  shortScoreWord?: string;
+  shortScoreWord?: ReactNode;
   onChangeScore?: (score: number, feedback: PasswordFeedback) => void;
 }
 
