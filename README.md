@@ -63,7 +63,7 @@ const { password } = this.state;
 - isRequired: false
 - default: ['#ddd', '#ef4836', '#f6b44d', '#2b90ef', '#25c281']
 
-#### `scoreWords`: string[]
+#### `scoreWords`: ReactNode[]
 - isRequired: false
 - default: ['weak', 'weak', 'okay', 'good', 'strong']
 
@@ -71,7 +71,7 @@ const { password } = this.state;
 - isRequired: false
 - default: 4
 
-#### `shortScoreWord`: string
+#### `shortScoreWord`: ReactNode
 - isRequired: false
 - default: 'too short'
 
