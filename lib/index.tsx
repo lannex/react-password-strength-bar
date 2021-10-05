@@ -6,7 +6,11 @@ import Item from './Item';
 
 export interface PasswordFeedback {
   warning?: string;
-  suggestions?: string[]
+  suggestions?: string[];
+}
+
+interface PasswordStrengthBarState {
+  score: number;
 }
 
 export interface PasswordStrengthBarProps {
@@ -20,12 +24,10 @@ export interface PasswordStrengthBarProps {
   scoreWords?: string[];
   minLength?: number;
   shortScoreWord?: string;
-  onChangeScore?: (score: number, feedback: PasswordFeedback) => void;
-}
-
-interface PasswordStrengthBarState {
-  score: number;
-  feedback: PasswordFeedback;
+  onChangeScore?: (
+    score: PasswordStrengthBarState['score'],
+    feedback: PasswordFeedback,
+  ) => void;
 }
 
 const rootStyle: CSSProperties = {
@@ -69,7 +71,6 @@ class PasswordStrengthBar extends React.Component<
 
   public state = {
     score: 0,
-    feedback: {}
   };
 
   public componentDidMount(): void {
@@ -95,7 +96,6 @@ class PasswordStrengthBar extends React.Component<
     this.setState(
       {
         score,
-        feedback
       },
       () => {
         if (onChangeScore) {
@@ -118,22 +118,18 @@ class PasswordStrengthBar extends React.Component<
       shortScoreWord,
     } = this.props;
     const { score } = this.state;
-    let newShortScoreWord = shortScoreWord;
-    if (password.length >= minLength) {
-      newShortScoreWord = scoreWords[score];
-    }
+    const newShortScoreWord =
+      password.length >= minLength ? scoreWords[score] : shortScoreWord;
 
     return (
       <div className={className} style={{ ...rootStyle, ...style }}>
         <div style={wrapStyle}>
-          {[1, 2, 3, 4].map((el: number) => {
-            return (
-              <Fragment key={`password-strength-bar-item-${el}`}>
-                {el > 1 && <div style={spaceStyle} />}
-                <Item score={score} itemNum={el} barColors={barColors} />
-              </Fragment>
-            );
-          })}
+          {[1, 2, 3, 4].map((el: number) => (
+            <Fragment key={`password-strength-bar-item-${el}`}>
+              {el > 1 && <div style={spaceStyle} />}
+              <Item score={score} itemNum={el} barColors={barColors} />
+            </Fragment>
+          ))}
         </div>
         <p
           className={scoreWordClassName}
