@@ -45,6 +45,6 @@
     "react/state-in-constructor": 0,
     "react/static-property-placement": [2, "static public field"],
     "no-use-before-define": 0,
-    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/no-use-before-define": ["error"]
   }
 }
