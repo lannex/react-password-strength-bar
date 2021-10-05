@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties, ReactNode } from 'react';
 export interface PasswordFeedback {
     warning?: string;
     suggestions?: string[];
@@ -14,9 +14,9 @@ export interface PasswordStrengthBarProps {
     password: string;
     userInputs?: string[];
     barColors?: string[];
-    scoreWords?: string[];
+    scoreWords?: ReactNode[];
     minLength?: number;
-    shortScoreWord?: string;
+    shortScoreWord?: ReactNode;
     onChangeScore?: (score: PasswordStrengthBarState['score'], feedback: PasswordFeedback) => void;
 }
 declare class PasswordStrengthBar extends React.Component<PasswordStrengthBarProps, PasswordStrengthBarState> {
@@ -27,6 +27,6 @@ declare class PasswordStrengthBar extends React.Component<PasswordStrengthBarPro
     componentDidMount(): void;
     componentDidUpdate(prevProps: PasswordStrengthBarProps): void;
     private setScore;
-    render(): React.ReactNode;
+    render(): ReactNode;
 }
 export default PasswordStrengthBar;
