@@ -26,6 +26,8 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "@typescript-eslint/no-use-before-define": ["error"],
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -36,14 +38,16 @@
         "tsx": "never"
       }
     ],
+    "no-unused-vars": "off",
+    "no-use-before-define": 0,
     "react/jsx-filename-extension": [
       2,
-      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
     ],
     "react/prop-types": 0,
     "react/state-in-constructor": 0,
-    "react/static-property-placement": [2, "static public field"],
-    "no-use-before-define": 0,
-    "@typescript-eslint/no-use-before-define": ["error"]
+    "react/static-property-placement": [2, "static public field"]
   }
 }
