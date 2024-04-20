@@ -16,6 +16,7 @@ interface PasswordStrengthBarState {
 export interface PasswordStrengthBarProps {
   className?: string;
   style?: CSSProperties;
+  barHeight?: number;
   scoreWordClassName?: string;
   scoreWordStyle?: CSSProperties;
   password: string;
@@ -58,6 +59,7 @@ class PasswordStrengthBar extends React.Component<
   public static defaultProps: PasswordStrengthBarProps = {
     className: undefined,
     style: undefined,
+    barHeight: 2,
     scoreWordClassName: undefined,
     scoreWordStyle: undefined,
     password: '',
@@ -109,6 +111,7 @@ class PasswordStrengthBar extends React.Component<
     const {
       className,
       style,
+      barHeight,
       scoreWordClassName,
       scoreWordStyle,
       password,
@@ -127,7 +130,7 @@ class PasswordStrengthBar extends React.Component<
           {[1, 2, 3, 4].map((el: number) => (
             <Fragment key={`password-strength-bar-item-${el}`}>
               {el > 1 && <div style={spaceStyle} />}
-              <Item score={score} itemNum={el} barColors={barColors} />
+              <Item score={score} itemNum={el} barColors={barColors} height={barHeight}/>
             </Fragment>
           ))}
         </div>
