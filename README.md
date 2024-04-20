@@ -59,6 +59,10 @@ const { password } = this.state;
 - isRequired: false
 - default: []
 
+#### `barHeight`: number
+- isRequired: false
+- default: 2
+
 #### `barColors`: string[]
 - isRequired: false
 - default: ['#ddd', '#ef4836', '#f6b44d', '#2b90ef', '#25c281']

@@ -4,6 +4,7 @@ interface PasswordStrengthBarItemProps {
   score: number;
   itemNum: number;
   barColors: string[];
+  height?: number;
 }
 
 const itemStyle: CSSProperties = {
@@ -19,6 +20,7 @@ const Item: React.FunctionComponent<PasswordStrengthBarItemProps> = ({
   score,
   itemNum,
   barColors,
+  height = itemStyle.height,
 }) => {
   let bgColor = barColors[0];
   if (score >= itemNum) {
@@ -29,6 +31,7 @@ const Item: React.FunctionComponent<PasswordStrengthBarItemProps> = ({
     <div
       style={{
         ...itemStyle,
+        height: height,
         backgroundColor: bgColor,
       }}
     />
