@@ -1,4 +1,6 @@
 # react-password-strength-bar
+> [DEPRECATED] This repository will no longer be updated.
+
 A React component that displays the password strength bar
 
 [![NPM](https://nodei.co/npm/react-password-strength-bar.png?compact=true)](https://nodei.co/npm/react-password-strength-bar/)
